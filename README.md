@@ -25,3 +25,10 @@ Z85 requires input whose length is a multiple of 4 bytes. The `encodeBlock` and 
 - `encodeBlock(Uint8Array(4)) -> string` (5 chars)
 - `decodeBlock(string(5)) -> Uint8Array` (4 bytes)
 - `alphabet` — the 85-character Z85 string
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
