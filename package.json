@@ -1,6 +1,6 @@
 {
   "name": "base85-encoding",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Encodes and decodes binary data into an 85-character ASCII subset for higher density than Base64.",
   "type": "module",
   "main": "src/index.js",
